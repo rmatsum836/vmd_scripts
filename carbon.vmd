@@ -1,0 +1,35 @@
+#CARBON FILE
+topo readlammpsdata data.final charge
+#PORE FILE
+#mol new
+#mol addfile /Users/mwt/Downloads/poresv500.xyz
+axes location Off
+menu display on
+menu graphics on
+display ambientocclusion on
+display aodirect 0.8
+rotate y by -45
+rotate x by 30
+menu render on
+mol addrep 0
+mol addrep 0
+mol addrep 0
+mol modselect 0 0 type 1 or type C
+mol modselect 1 0 type 1 or type C
+mol modselect 2 0 x < 0 and type 1 or type C
+mol modselect 3 0 x > 0 and type 1 or type C
+mol modstyle 0 0 DynamicBonds 2.0 0.3 20.0
+mol modstyle 1 0 VDW 0.2 20.0
+mol modcolor 0 0 ColorID 6
+mol modcolor 1 0 ColorID 6
+mol modcolor 2 0 ColorID 6
+mol modcolor 3 0 ColorID 6
+mol modstyle 2 0 QuickSurf 0.5 0.5 0.5 3.0
+mol modstyle 3 0 QuickSurf 0.5 0.5 0.5 3.0
+mol modmaterial 0 0 AOEdgy
+mol modmaterial 1 0 AOEdgy
+mol modmaterial 2 0 AOEdgy
+mol modmaterial 3 0 Transparent
+display resize 1000 1000
+render TachyonInternal render.tga /usr/bin/open %s
+exit

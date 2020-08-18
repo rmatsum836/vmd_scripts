@@ -1,0 +1,13 @@
+#VMD file for water on graphene
+axes location Off
+menu display on
+menu graphics on
+display ambientocclusion on
+rotate y by 90
+#rotate x by -90
+menu render on
+mol addrep 0
+mol modselect 0 0 resname SOL 
+mol modstyle 0 0 VDW 1.0 18.0
+mol modcolor 0 0 Name 
+mol modmaterial 0 0 EdgyShiny

@@ -1,0 +1,9 @@
+axes location Off
+display ambientocclusion on
+
+mol modstyle 0 0 VDW 0.8 12.0
+mol modmaterial 0 0 AOEdgy
+display resize 1000 1000
+
+render TachyonInternal slitpore.tga
+exit

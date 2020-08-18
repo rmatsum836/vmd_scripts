@@ -1,0 +1,23 @@
+#VMD file for bulk IL simulation with various solvents 
+axes location Off
+menu display on
+menu graphics on
+display ambientocclusion on
+menu render on
+#rotate x by 270
+rotate y by -25
+rotate x by 15
+mol addrep 0
+mol addrep 0
+mol modselect 0 0 not resname bmim and not resname tf2n
+mol modselect 1 0 resname bmim 
+mol modselect 2 0 resname tf2n 
+mol modstyle 0 0 VDW 0.8 18.0
+mol modstyle 1 0 VDW 0.8 18.0 
+mol modstyle 2 0 VDW 0.8 18.0
+mol modcolor 0 0 ColorID 4
+mol modcolor 1 0 ColorID 0
+mol modcolor 2 0 ColorID 1
+mol modmaterial 0 0 AOEdgy
+mol modmaterial 1 0 AOEdgy
+mol modmaterial 2 0 AOEdgy

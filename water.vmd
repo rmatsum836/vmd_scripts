@@ -1,0 +1,36 @@
+# VMD for MACOSXX86, version 1.9.1 (February 4, 2012)
+# Log file 'water.log', created by user mattthompson
+mol addrep 0
+mol addrep 0
+mol addrep 0
+mol modselect 0 0 resname BMIM Tf2N
+mol modselect 1 0 resname GPH
+mol modselect 2 0 resname SOL and type OW
+mol modselect 3 0 resname SOL and type HW1 HW2
+mol modstyle 0 0 QuickSurf
+mol modstyle 1 0 VDW 1.000000 50.000000
+mol modstyle 2 0 VDW 1.000000 50.000000
+mol modstyle 3 0 VDW 1.000000 50.000000
+mol modmaterial 0 0 Ghost
+mol modmaterial 1 0 AOEdgy
+mol modmaterial 2 0 AOEdgy
+mol modmaterial 3 0 AOEdgy
+mol modcolor 0 0 ColorID 2
+mol modcolor 1 0 ColorID 6
+mol modcolor 2 0 ColorID 1
+mol modcolor 3 0 ColorID 8
+mol selection resname BMIM Tf2N
+mol selection resname SOL
+light 0 off
+light 1 pos { 0 0 1}
+#display resize 80 30
+display resize 800 300
+scale by 5
+axes location Off
+display ambientocclusion on
+display aodirect 0.800000
+#menu display on
+#menu graphics on
+#menu render on
+render TachyonInternal vmdscene.tga /usr/bin/open %s
+exit
